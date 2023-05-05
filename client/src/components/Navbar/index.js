@@ -6,12 +6,12 @@ function Navigation() {
   return (
     <Navbar bg='light' expand='lg'>
       <Container>
-        <Navbar.Brand href='#home'>Home</Navbar.Brand>
+        <Navbar.Brand href='/'>Home</Navbar.Brand>
         <Navbar.Toggle aria-controls='navbar-nav' />
         <Navbar.Collapse id='navbar-nav'>
           <Nav className='ms-auto'>
-            <Nav.Link href='#login'>Login</Nav.Link>
-            <Nav.Link href='#cart'>Cart</Nav.Link>
+            <Nav.Link href='/login'>Login</Nav.Link>
+            <Nav.Link href='/cart'>Cart</Nav.Link>
           </Nav>
         </Navbar.Collapse>
       </Container>
