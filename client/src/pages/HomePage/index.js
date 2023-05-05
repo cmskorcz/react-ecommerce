@@ -1,11 +1,12 @@
 import Hero from "../../components/Hero";
 import Products from "../../components/Products";
 
-function HomePage() {
+function HomePage(props) {
+  const { productsArr } = props
   return (
     <>
       <Hero />
-      <Products />
+      <Products productsArr={productsArr} />
     </>
   )
 }
