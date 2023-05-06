@@ -1,6 +1,7 @@
 const express = require('express')
 const cors = require('cors')
 const path = require('path')
+const db = require('./config/connection')
 
 const app = express();
 const PORT = process.env.PORT || 3001;
@@ -17,6 +18,8 @@ app.get('*', (req, res) => {
   res.sendFile(path.join(__dirname, '../client/build/index.html'))
 })
 
-app.listen(PORT, () => {
-  console.log(`Now serving on PORT: ${PORT}`)
+db.once('open', () => {
+  app.listen(PORT, () => {
+    console.log(`Now serving on PORT: ${PORT}`)
+  })
 })
